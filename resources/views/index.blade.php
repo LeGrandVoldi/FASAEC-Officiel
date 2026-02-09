@@ -50,7 +50,8 @@
     </script>
     @endverbatim
 
-    <title>FASAEC</title>
+    <title>FASAEC – Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais</title>
+    <meta name="description" content="Le FASAEC accompagne, protège et soutient les artistes et écrivains congolais en République Démocratique du Congo.">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,60 +78,31 @@
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/page-loader.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/banner.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}?v={{ time() }}">
 
-
-    <style>
-       .menu-logo {
-        margin-top: 10px;
-        transition: margin-top 220ms ease;
-        }
-
-        #logo-couleur {
-        display: none; /* caché au départ */
-        }
-
-        .menu-logo.scrolled {
-        margin-top: 0;
-        }
-
-        .menu-logo.scrolled #logo-transparent {
-        display: none;
-        }
-
-        .menu-logo.scrolled #logo-couleur {
-        display: inline-block;
-        }
-
-        .span {
-        background-color: white;
-        transition: background-color 180ms ease;
-        }
-
-        .span.span--scrolled {
-        background-color: rgba(100,100,100,0.8);
-        }
-
-    </style>
-    <style>
-        .mobile-menu-button .span {
-            background-color: #fff;
-            transition: background-color 0.3s ease;
-        }
-
-        .mobile-menu-button .span.span--scrolled {
-            background-color: #000;
-        }
-    </style>
-<!--
-
-TemplateMo 569 Edu Meeting
-
-https://templatemo.com/tm-569-edu-meeting
-
--->
   </head>
 
 <body>
+
+<!-- Loader -->
+<div id="page-loader">
+    <div class="loader-content">
+        <img src="{{ asset('img/logo1.png') }}" alt="FASAEC Logo" class="loader-logo">
+    </div>
+</div>
+<script>
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("page-loader");
+        loader.classList.add("fade-out");
+
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 600);
+    });
+</script>
+
 
  {{-- message --}}
  <style>
@@ -189,39 +161,6 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
   </div>
 
-  <!-- ***** Header Area Start ***** -->
-  {{-- <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          <img id="site-logo" src="{{ asset('img/logo-transparant.png') }}?v={{ time() }}" alt="" height="100px">
-
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-
-                      <ul class="nav">
-                          <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-                          <li><a href="#mission">LE FASAEC</a></li>
-                          <li class="scroll-to-section"><a href="#valeurs">DROITS & PROTECTION SOCIALE</a></li>
-
-                          <li class="scroll-to-section"><a href="#membres">ARTISTES & NUMÉRIQUE / IA</a></li>
-                          <li class="scroll-to-section"><a href="#contact">AIDES & ACCOMPAGNEMENT</a></li>
-                          <li class="scroll-to-section"><a href="#membres">ACTUALITÉS & RESSOURCES</a></li>
-                          <li class="scroll-to-section"><a href="#contact">CONTACT & ORIENTATION</a></li>
-                      </ul>
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
-  </header> --}}
 
   <header class="header header-area header-sticky">
 	<div class="topbar-one">
@@ -269,7 +208,7 @@ https://templatemo.com/tm-569-edu-meeting
 									<a href="/">ACCUEIL</a>
 								</li><!-- has-dropdown -->
                                 <li>
-									<a href="/identification-artistes" style="white-space: nowrap;">S'IDENTIFIER EN TANT QU'ARTISTES</a>
+									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER EN TANT QU'ARTISTES</a>
 								</li><!-- has-dropdowfn -->
 								<li>
 									<a href="/le-fasaec">LE FASAEC</a>
@@ -327,14 +266,101 @@ https://templatemo.com/tm-569-edu-meeting
               <h3 style="color: white">Pont Numérique de la Culture & du Social.</h3><br>
               <p>Le Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais  accompagne, protège et soutient les artistes et écrivains de la République Démocratique du Congo dans leur parcours social, professionnel et numérique. </p>
               <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Contacter  FASAEC</a></div><br>
+                  <div ><a href="https://enregistrement.capcongo.online/" target="_blank">Je m'identifie en tant qu'artiste</a></div><br>
               </div>
-          </div>
+              </div>
               </div>
             </div>
           </div>
       </div>
   </section>
+
+  {{-- xxxxxx --}}
+
+  <!-- BANNIERE MISSION: remplacez la <section class="apply-now1" id="mission"> existante par ce bloc -->
+<style>
+    .mission-banner {
+        position: relative;
+    }
+
+    .year-badge {
+        position: absolute;
+        top: 20px;
+        right: 5px;
+        background: linear-gradient(135deg, #ff7a18, #ffb347);
+        color: white;
+        padding: 8px 18px;
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        letter-spacing: 1px;
+        z-index: 10;
+    }
+    .year-badge {
+        animation: floatBadge 3s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
+    }
+
+</style>
+<section class="apply-now1 mission-banner" id="mission">
+    <div class="year-badge">en 2026</div>
+  <div class="banner-inner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="banner-text">
+            <h2>FASAEC — Pont Numérique de la Culture & du Social</h2>
+            <p>Nous accompagnons, protégeons et soutenons les artistes et écrivains congolais. Découvrez notre impact et rejoignez la communauté.</p>
+            <div class="main-button-bann">
+                <a href="https://enregistrement.capcongo.online/" target="_blank">Je m'identifie en tant qu'artiste</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="stats-cards">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-card">
+                  <div class="stat-number" data-target="7000" data-suffix="+">0</div>
+                  <div class="stat-label">identifications</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <div class="stat-number" data-target="40" data-suffix="+">0</div>
+                  <div class="stat-label">parrainages sociaux</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <div class="stat-number" data-target="50" data-suffix="+">0</div>
+                  <div class="stat-label">années d'expérience</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <div class="stat-number" data-target="9" data-suffix="">0</div>
+                  <div class="stat-label">directions provinciales</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN bannière -->
+
+
   <!-- ***** Main Banner Area End ***** -->
 
   <section class="apply-now" id="mission">
@@ -345,9 +371,9 @@ https://templatemo.com/tm-569-edu-meeting
             <div class="col-lg-12">
               <div class="item">
                 <h3>NOTRE MISSION</h3>
-                <p>permettre aux artistes congolais de créer, vivre et évoluer dans un écosystème culturel structuré, équitable et moderne.</p>
+                <p style="text-align: justify">Notre mission est de favoriser l’épanouissement des artistes congolais en construisant un environnement culturel structuré, transparent et inclusif, où chaque créateur peut développer son talent, bénéficier d’une reconnaissance légitime, accéder à des ressources adaptées et vivre durablement de son art dans un contexte moderne et compétitif.</p>
                 <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Contacter  FASAEC</a></div>
+                  <div class="scroll-to-section"><a target="_blank" href="https://enregistrement.capcongo.online/">Voir les artistes</a></div>
               </div>
               </div>
             </div>
@@ -360,10 +386,8 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="accordion-head">
                     <span>FASAEC</span>
                 </div>
-                <div class="accordion-body">
-                    <div class="content">
-                        <p>Dans un contexte de profondes mutations — précarité sociale, transformation numérique, intelligence artificielle, nouvelles formes de création — le FASAEC agit comme *un pilier institutionnel* pour renforcer la dignité, la sécurité et la reconnaissance du travail artistique.</p>
-                    </div>
+                <div class="accordion-body" >
+                        <p style="padding-bottom: 40px; text-align: justify">Dans un contexte marqué par de profondes mutations — précarité sociale croissante, transformation numérique accélérée, émergence de l’intelligence artificielle et nouvelles formes d’expression artistique — le FASAEC s’affirme comme un pilier institutionnel essentiel. Il œuvre pour garantir la dignité des artistes, renforcer leur sécurité sociale et professionnelle, et assurer la reconnaissance pleine et entière de leur contribution au développement culturel et économique du pays. À travers des mécanismes adaptés aux réalités contemporaines, le FASAEC accompagne les créateurs dans leur adaptation aux évolutions technologiques et aux nouveaux modèles de diffusion et de monétisation de leurs œuvres.</p>
                 </div>
             </article>
 
@@ -372,334 +396,6 @@ https://templatemo.com/tm-569-edu-meeting
       </div>
     </div>
   </section>
-
-  {{-- <section class="our-courses" id="valeurs">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Our Popular Courses</h2>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="owl-courses-item owl-carousel">
-            <div class="item">
-              <img src="assets/images/course-01.jpg" alt="Course One">
-              <div class="down-content">
-                <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$160</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-02.jpg" alt="Course Two">
-              <div class="down-content">
-                <h4>Curabitur molestie dignissim purus vel</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$180</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Nulla at ipsum a mauris egestas tempor</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$140</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-04.jpg" alt="">
-              <div class="down-content">
-                <h4>Aenean molestie quis libero gravida</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$120</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-01.jpg" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$250</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-02.jpg" alt="">
-              <div class="down-content">
-                <h4>TemplateMo is the best website for Free CSS</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$270</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Web Design Templates at your finger tips</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$340</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-04.jpg" alt="">
-              <div class="down-content">
-                <h4>Please visit our website again</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$360</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-01.jpg" alt="">
-              <div class="down-content">
-                <h4>Responsive HTML Templates for you</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$400</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Download Free CSS Layouts for your business</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$430</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Morbi in libero blandit lectus cursus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$480</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="assets/images/course-04.jpg" alt="">
-              <div class="down-content">
-                <h4>Curabitur molestie dignissim purus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$560</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="our-facts" id="membres">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2>A Few Facts About Our University</h2>
-            </div>
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-12">
-                  <div class="count-area-content percentage">
-                    <div class="count-digit">94</div>
-                    <div class="count-title">Succesed Students</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="count-area-content">
-                    <div class="count-digit">126</div>
-                    <div class="count-title">Current Teachers</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-12">
-                  <div class="count-area-content new-students">
-                    <div class="count-digit">2345</div>
-                    <div class="count-title">New Students</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="count-area-content">
-                    <div class="count-digit">32</div>
-                    <div class="count-title">Awards</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 align-self-center">
-          <div class="video">
-            <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="assets/images/play-icon.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
 
   <section class="contact-us" id="contact">
     <div class="container">
@@ -917,6 +613,52 @@ République Démocratique du Congo</span>
     <script src="assets/js/video.js?v={{ time() }}"></script>
     <script src="assets/js/slick-slider.js?v={{ time() }}"></script>
     <script src="assets/js/custom.js?v={{ time() }}"></script>
+    <script>
+        (function(){
+            // Animation des compteurs: démarrer à 0, compter jusqu'à data-target quand la section apparaît
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.4 };
+            const missionSection = document.querySelector('#mission');
+            if (!missionSection) return;
+
+            let started = false;
+            const animateCounters = () => {
+            const counters = missionSection.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target')) || 0;
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const duration = 1500; // durée en ms
+                const start = 0;
+                let startTime = null;
+
+                const step = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+                const value = Math.floor(progress * (target - start) + start);
+                counter.textContent = value.toLocaleString('fr-FR') + suffix;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    // assurer l'affichage exact de la cible
+                    counter.textContent = target.toLocaleString('fr-FR') + suffix;
+                }
+                };
+                window.requestAnimationFrame(step);
+            });
+            };
+
+            const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !started) {
+                started = true;
+                animateCounters();
+                io.unobserve(missionSection);
+                }
+            });
+            }, observerOptions);
+
+            io.observe(missionSection);
+        })();
+    </script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
