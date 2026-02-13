@@ -117,16 +117,7 @@
         animation: fadeInUp 0.8s ease-out 0.2s backwards;
     }
 
-    /* Background animations */
-    .hero-bg{
-        position:absolute;
-        inset:0;
-        background:url("{{ asset('img/mission-couleur.jpg') }}") center/cover no-repeat;
-        opacity:0.08;
-        transform:scale(1.1);
-        filter:grayscale(.2) contrast(1.1);
-        animation: slowZoom 20s ease-in-out infinite alternate;
-    }
+   
     .hero-shape{
         position:absolute;
         border-radius:30%;

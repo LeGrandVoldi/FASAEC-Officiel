@@ -208,15 +208,15 @@
 									<a href="/">ACCUEIL</a>
 								</li><!-- has-dropdown -->
                                 <li>
-									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER EN TANT QU'ARTISTES</a>
+									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER</a>
 								</li><!-- has-dropdowfn -->
 								<li>
 									<a href="/le-fasaec">LE FASAEC</a>
 								</li><!-- has-dropdowfn -->
-								<li>
+								 <li>
 									<a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
 								</li><!-- has-dropdown -->
-								<li>
+								{{--<li>
 									<a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
 								</li><!-- has-dropdown -->
 								<li>
@@ -227,7 +227,7 @@
 								</li>
                                 <li>
 									<a href="/contact">CONTACT & ORIENTATION</a>
-								</li>
+								</li> --}}
                                 <li></li><br><!-- li -->
 							</ul><!-- main-menu-list -->
 						</nav><!-- navigation -->

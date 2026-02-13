@@ -171,15 +171,15 @@
 									<a href="/">ACCUEIL</a>
 								</li><!-- has-dropdown -->
                                 <li>
-									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER EN TANT QU'ARTISTES</a>
+									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER</a>
 								</li><!-- has-dropdowfn -->
 								<li>
 									<a href="/le-fasaec">LE FASAEC</a>
 								</li><!-- has-dropdowfn -->
-								{{-- <li>
+								<li>
 									<a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
 								</li><!-- has-dropdown -->
-								<li>
+								{{-- <li>
 									<a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
 								</li><!-- has-dropdown -->
 								<li>
@@ -220,6 +220,18 @@
 
     <div class="container">
         <br><br>
+        <style>
+             /* Background animations */
+            .hero-bg{
+                position:absolute;
+                inset:0;
+                background:url("{{ asset('img/mission-couleur.jpg') }}") center/cover no-repeat;
+                opacity:0.08;
+                transform:scale(1.1);
+                filter:grayscale(.2) contrast(1.1);
+                animation: slowZoom 20s ease-in-out infinite alternate;
+            }
+        </style>
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="hero-card">
@@ -337,7 +349,7 @@
                         <div class="mission-icon"><i class="fas fa-laptop-code"></i></div>
                         <div>
                             <h3 class="mission-title">Transition numérique</h3>
-                            <p class="mission-text">Soutenir l'adoption des outils numériques et l'usage éthique de l'IA dans la création.</p>
+                            <p class="mission-text">Soutenir l'adoption des outils numériques.</p>
                         </div>
                     </div>
                 </div>
@@ -373,12 +385,22 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <div class="vision-card card-appear" style="animation-delay:.2s">
+                    <div class="vision-card card-appear text-center" style="animation-delay:.2s">
                         <div class="vision-icon"><i class="fas fa-briefcase"></i></div>
                         <h4 class="vision-title">Professionnellement structuré</h4>
                         <p class="vision-text">Un secteur organisé avec des standards professionnels reconnus.</p>
                     </div>
                 </div>
+                <style>
+                    .vision-card,.stat-card {
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                </style>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="vision-card card-appear" style="animation-delay:.3s">
@@ -475,14 +497,6 @@
         <div class="container">
             <div class="cta-card text-center card-appear">
                 <div style="max-width:700px;margin:0 auto">
-                   <h3 class="cta-title">
-                        <i class="fas fa-users me-3"></i>
-                        Rejoignez la Communauté FASAEC
-                    </h3>
-                    <p class="ppp" style="color:rgba(255,255,255,0.9);margin-bottom:30px;font-size:1.15rem;line-height:1.7">
-                        Ensemble, construisons un avenir meilleur pour les artistes et écrivains congolais.
-                        Bénéficiez d'une protection sociale, d'un accompagnement professionnel et d'une reconnaissance officielle.
-                    </p>
                     <a href="https://enregistrement.capcongo.online/" target="_blank" class="btn btn-primary-custom ppp" style="white-space:nowrap;">
                         <i class="fas fa-user-plus me-2"></i> Je m'identifie
                     </a>
