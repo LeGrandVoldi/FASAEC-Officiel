@@ -1,60 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="canonical" href="https://fasaec.cd/artistes-numerique-ia" />
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    {{-- JS --}}
-    @verbatim
-    <script type="application/ld+json?v={{ time() }}">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "FASAEC",
-            "url": "https://fasaec.cd",
-            "logo": "https://fasaec.cd/img/logo.png",
-            "sameAs": [
-                "https://www.facebook.com/share/17noYupcVM/",
-                "https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==",
-                "https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/",
-                "https://x.com/fasaecofficiel",
-            ]
-        }
-    </script>
-    <script type="application/ld+json?v={{ time() }}">
-        {
-            "@context": "https://schema.org",
-            "@type": "SiteNavigationElement",
-            "name": [
-                "Accueil",
-                "Le FASAEC",
-                "Droits & Protection sociale",
-                "Artistes & Numérique / IA",
-                "Aides & Accompagnement",
-                "Actualités & Ressources",
-                "Contact & Orientation"
-            ],
-            "url": [
-                "https://fasaec.cd/",
-                "https://fasaec.cd/le-fasaec/",
-                "https://fasaec.cd/droits-protection-sociale/",
-                "https://fasaec.cd/artistes-numerique-ia/",
-                "https://fasaec.cd/aides-accompagnement/",
-                "https://fasaec.cd/actualites/",
-                "https://fasaec.cd/contact/"
-            ]
-        }
-    </script>
-    @endverbatim
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Artistes, Numérique & Intelligence Artificielle en RDC | FASAEC</title>
-    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
-    <meta property="og:url" content="https://fasaec.cd" />
-    <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
+    <meta name="description" content="Le FASAEC accompagne les artistes congolais dans leur transition numérique et leur appropriation de l'intelligence artificielle.">
+    <meta name="author" content="FASAEC">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <meta name="description" content="Le FASAEC accompagne les artistes congolais dans la transformation numérique et l'intelligence artificielle en RDC : formations digitales, outils IA, monétisation en ligne et protection des œuvres.">
+    <title>Artistes & Numérique / IA | FASAEC</title>
+
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -81,6 +35,368 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Page Loader */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        #page-loader.fade-out {
+            opacity: 0;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 150px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Sub Header */
+        .sub-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .sub-header .left-content p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .sub-header .right-icons ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        .sub-header .right-icons ul li a {
+            color: var(--white);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .sub-header .right-icons ul li a:hover {
+            color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        .header-area {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .topbar-one {
+            padding: 15px 0;
+        }
+
+        .menu-logo img {
+            width: 160px;
+            transition: all 0.3s ease;
+        }
+
+        .topbar-one-middle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .topbar-info ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .topbar-info ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topbar-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .topbar-text a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .topbar-right ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topbar-right ul li {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* Navigation */
+        .main-menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-menu-list li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .main-menu-list li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .main-menu-list li a:hover::after,
+        .main-menu-list li.active a::after {
+            width: 100%;
+        }
+
+        .main-menu-list li a:hover,
+        .main-menu-list li.active a {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-button {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-button .span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url("https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg?auto=compress&cs=tinysrgb&w=1920") center/cover no-repeat;
+            opacity: 0.08;
+            transform: scale(1.1);
+            filter: grayscale(0.2) contrast(1.1);
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1.1); }
+            to { transform: scale(1.15); }
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .hero-shape.s1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-shape.s2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-shape.s3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            color: var(--muted);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 10px 30px rgba(23,102,209,0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(23,102,209,0.4);
+            color: var(--white);
+        }
+
+        .btn-light {
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-light:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(23,102,209,0.3);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 2px;
+        }
+
+        .section-sub {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         /* Digital Cards */
@@ -123,6 +439,7 @@
         }
 
         .digital-title {
+            font-family: 'Outfit', sans-serif;
             font-weight: 700;
             font-size: 1.4rem;
             color: var(--primary);
@@ -269,6 +586,7 @@
         }
 
         .tool-content h4 {
+            font-family: 'Outfit', sans-serif;
             font-weight: 700;
             color: var(--primary);
             font-size: 1.2rem;
@@ -306,6 +624,7 @@
         }
 
         .process-step h4 {
+            font-family: 'Outfit', sans-serif;
             font-weight: 700;
             color: var(--dark);
             font-size: 1.3rem;
@@ -330,7 +649,38 @@
             }
         }
 
+        /* Stats */
+        .stat-card {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid rgba(23, 102, 209, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(23, 102, 209, 0.3);
+            box-shadow: 0 10px 30px rgba(23, 102, 209, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
 
         /* FAQ */
         .faq-item {
@@ -348,6 +698,7 @@
 
         .faq-question {
             padding: 25px 30px;
+            font-family: 'Outfit', sans-serif;
             font-weight: 700;
             color: var(--dark);
             font-size: 1.15rem;
@@ -415,6 +766,7 @@
         }
 
         .cta-card h3 {
+            font-family: 'Outfit', sans-serif;
             font-weight: 800;
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 20px;
@@ -433,6 +785,269 @@
             z-index: 1;
         }
 
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-inner {
+            padding-bottom: 40px;
+        }
+
+        .footer-widget-logo img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-widget-text p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+
+        .footer-widget-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-widget-socials a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .footer-widget-socials a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-widget-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--white);
+        }
+
+        .footer-widget ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-widget ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-widget ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-widget ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-widget-contact p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 15px;
+        }
+
+        .footer-widget-contact-list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-widget-contact-list i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .footer-widget-contact-item a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-widget-contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .bottom-footer {
+            background: rgba(0,0,0,0.2);
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .bottom-footer p {
+            margin: 0;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .mobile-nav-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-content {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            max-width: 90%;
+            height: 100%;
+            background: var(--white);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding: 30px;
+        }
+
+        .mobile-nav-wrapper.expanded {
+            pointer-events: all;
+        }
+
+        .mobile-nav-wrapper.expanded .mobile-nav-overlay {
+            opacity: 1;
+        }
+
+        .mobile-nav-wrapper.expanded .mobile-nav-content {
+            right: 0;
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .mobile-nav-close span {
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-close span:first-child {
+            transform: rotate(45deg) translateY(10px);
+        }
+
+        .mobile-nav-close span:last-child {
+            transform: rotate(-45deg) translateY(-10px);
+        }
+
+        .logo-box {
+            margin-bottom: 30px;
+        }
+
+        .logo-box img {
+            width: 140px;
+        }
+
+        .mobile-nav-container ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobile-nav-container ul li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-container ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: block;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-container ul li a:hover,
+        .mobile-nav-container ul li.active a {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+
+        .mobile-nav-contact {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .mobile-nav-contact li i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        .mobile-nav-contact li a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .mobile-nav-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .mobile-nav-social li a {
+            width: 40px;
+            height: 40px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-social li a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
 
         /* Animations */
         .card-appear {
@@ -446,52 +1061,65 @@
             transform: translateY(0);
         }
 
+        /* Responsive */
+        @media (max-width: 991px) {
+            .topbar-one-middle {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
+            .main-menu-list {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-sub {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-card {
+                padding: 30px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+
+            .sub-header .left-content p {
+                font-size: 0.8rem;
+            }
+
+            .topbar-right {
+                display: none;
+            }
+        }
+
+        body.locked {
+            overflow: hidden;
+        }
     </style>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css?v=<?= time() ?>">
-    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css?v=<?= time() ?>">
-    <link rel="stylesheet" href="assets/css/owl.css?v=<?= time() ?>">
-    <link rel="stylesheet" href="assets/css/lightbox.css?v=<?= time() ?>">
-
-    <link rel="icon" type="image/png" sizes="32x32" href={{ asset('img/logo.png') }}>
-
-    <!-- google font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/page-loader.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/banner.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/style-1.css') }}?v={{ time() }}">
-
 </head>
 
 <body>
 <!-- Loader -->
 <div id="page-loader">
     <div class="loader-content">
-        <img src="img/logo1.png?v={{ time() }}" alt="FASAEC Logo" class="loader-logo">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="FASAEC Logo" class="loader-logo" style="border-radius: 50%;">
     </div>
 </div>
-
-<script>
-    window.addEventListener("load", function() {
-        const loader = document.getElementById("page-loader");
-        loader.classList.add("fade-out");
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 600);
-    });
-</script>
 
 <!-- Sub Header -->
 <div class="sub-header">
@@ -502,13 +1130,13 @@
                     <p>Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-4" style="z-index: 1000;">
+            <div class="col-lg-4 col-sm-4">
                 <div class="right-icons">
                     <ul>
                         <li><a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -517,115 +1145,83 @@
 </div>
 
 <!-- Header -->
-<header class="header header-area header-sticky">
+<header class="header header-area">
     <div class="topbar-one">
-        <div class="topbar-one-left">
-            <div class="menu-logo">
-                <a href="/">
-                    <img id="logo-transparent" src="img/logo-transparant.png" width="160" alt="logo transparent">
-                    <img id="logo-couleur" src="img/logo-couleur.png" width="160" alt="logo couleur">
-                </a>
-            </div>
-        </div>
-
         <div class="container">
-            <div class="topbar-one-middle">
-                <div class="topbar-info">
-                    <ul>
-                        <li>
-                            <div class="topbar-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="topbar-text">
-                                <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="menu-logo">
+                    <a href="/">
+                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=160&h=60&fit=crop" width="160" alt="logo">
+                    </a>
                 </div>
 
-                <div class="topbar-right">
-                    <ul>
-                        <li>124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, Ville Kinshasa, République Démocratique du Congo</li>
-                    </ul>
+                <div class="topbar-one-middle">
+                    <div class="topbar-info">
+                        <ul>
+                            <li>
+                                <div class="topbar-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="topbar-text">
+                                    <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topbar-right">
+                        <ul>
+                            <li>124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, RDC</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-button mobile-nav-toggler">
+                    <span class="span"></span>
+                    <span class="span"></span>
+                    <span class="span"></span>
                 </div>
             </div>
 
-            <div class="main-menu menu-two sticky-header">
-                <div class="main-menu-one-inner">
-                    <div class="main-menu-left">
-                        <nav class="navigation">
-                            <ul class="main-menu-list list-unstyled">
-                                <li>
-                                    <a href="/">ACCUEIL</a>
-                                </li>
-                                <li>
-                                    <a href="/le-fasaec">LE FASAEC</a>
-                                </li>
-                                <li class="active">
-                                    <a href="/droits-protection-sociale" style="white-space: nowrap;">DROITS & PROTECTION SOCIALE</a>
-                                </li>
-                                <li>
-									<a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
-								</li>
-                                <li>
-									<a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
-								</li>
-                                
-                                <li></li><br>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="main-menu-right">
-                        <div class="mobile-menu-button mobile-nav-toggler">
-                            <span class="span"></span>
-                            <span class="span"></span>
-                            <span class="span"></span>
-                        </div>
-                    </div>
-                </div>
+            <div class="main-menu" style="margin-top: 20px;">
+                <nav class="navigation">
+                    <ul class="main-menu-list">
+                        <li><a href="/">ACCUEIL</a></li>
+                        <li><a href="https://enregistrement.capcongo.online/">S'IDENTIFIER</a></li>
+                        <li><a href="/le-fasaec">LE FASAEC</a></li>
+                        <li><a href="/droits-protection-sociale">DROITS & PROTECTION SOCIALE</a></li>
+                        <li class="active"><a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
 </header>
 
 <!-- HERO SECTION -->
-<div class="header-text hero-section" id="droits">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-shape s1" aria-hidden="true"></div>
-    <div class="hero-shape s2" aria-hidden="true"></div>
-    <div class="hero-shape s3" aria-hidden="true"></div>
-
-    <style>
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url("img/mission-couleur.jpg") center/cover no-repeat;
-            opacity: 0.08;
-            transform: scale(1.1);
-            filter: grayscale(.2) contrast(1.1);
-            animation: slowZoom 20s ease-in-out infinite alternate;
-        }
-    </style>
+<div class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-shape s1"></div>
+    <div class="hero-shape s2"></div>
+    <div class="hero-shape s3"></div>
 
     <div class="container">
-        <br><br>
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="hero-card">
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <h1 class="hero-title">
-                                <i class="fas fa-robot me-3"></i>
+                                <i class="fas fa-laptop-code me-3"></i>
                                 Artistes & Numérique / IA
                             </h1>
                             <p class="hero-sub">Embrasser la révolution numérique et l'intelligence artificielle pour propulser votre art vers de nouveaux horizons</p>
-                            <div class="d-md-flex flex-md-nowrap">
-                                <a href="#opportunites" class="btn btn-light btn-lg me-3 mss">
+                            <div class="d-md-flex flex-md-nowrap gap-3">
+                                <a href="#opportunites" class="btn btn-light btn-lg mb-2 mb-md-0">
                                     <i class="fas fa-lightbulb me-2"></i>
                                     Opportunités
-                                </a><br>
-                                <a href="#outils" class="btn btn-primary-custom btn-lg mss">
+                                </a>
+                                <a href="#outils" class="btn btn-primary-custom btn-lg">
                                     <i class="fas fa-tools me-2"></i>
                                     Nos outils
                                 </a>
@@ -634,11 +1230,11 @@
 
                         <div class="col-md-4 text-md-end mt-4 mt-md-0">
                             <div style="display:inline-block">
-                                <div class="icon-circle mb-3" title="Appelez-nous">
-                                    <i class="fas fa-phone-alt"></i>
+                                <div class="icon-circle mb-3" title="Contactez-nous">
+                                    <i class="fas fa-headset"></i>
                                 </div>
-                                <div style="color:#fff;font-weight:700;font-size:1.2rem">+243 830 681 299</div>
-                                <div style="color:rgba(255,255,255,0.8);font-size:0.9rem">Disponible 24/7</div>
+                                <div style="color:#1766d1;font-weight:700;font-size:1.2rem">Support 24/7</div>
+                                <div style="color:#5a6c7d;font-size:0.9rem">Assistance technique</div>
                             </div>
                         </div>
                     </div>
@@ -648,6 +1244,54 @@
     </div>
 </div>
 
+<!-- GALERIE D'IMAGES ARTISTES & NUMÉRIQUE -->
+<section class="content-section" style="background: linear-gradient(180deg, #f8faff, #fff);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" style="display:inline-block">L'Art Rencontre La Technologie</h2>
+            <p class="section-sub">Découvrez comment les artistes congolais embrassent le numérique et l'IA</p>
+        </div>
+
+        <div class="image-gallery">
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Artiste digital">
+                <div class="gallery-overlay">
+                    <span>Création Digitale</span>
+                </div>
+            </div>
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IA et Musique">
+                <div class="gallery-overlay">
+                    <span>IA & Musique</span>
+                </div>
+            </div>
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/7988088/pexels-photo-7988088.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Art numérique">
+                <div class="gallery-overlay">
+                    <span>Art Numérique</span>
+                </div>
+            </div>
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Formation digitale">
+                <div class="gallery-overlay">
+                    <span>Formation Digitale</span>
+                </div>
+            </div>
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Technologie créative">
+                <div class="gallery-overlay">
+                    <span>Tech Créative</span>
+                </div>
+            </div>
+            <div class="gallery-item card-appear">
+                <img src="https://images.pexels.com/photos/7988675/pexels-photo-7988675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Studio virtuel">
+                <div class="gallery-overlay">
+                    <span>Studio Virtuel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- OPPORTUNITÉS NUMÉRIQUES -->
 <section class="content-section" id="opportunites">
@@ -728,7 +1372,7 @@
             <div class="ai-banner-content">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <h2 style="font-weight:800; font-size:2.5rem; margin-bottom:20px; color:#ffffff;">
+                        <h2 style="font-family:'Outfit',sans-serif; font-weight:800; font-size:2.5rem; margin-bottom:20px; color:#ffffff;">
                             L'IA au Service de Votre Créativité
                         </h2>
                         <p style="font-size:1.2rem; color:#ffffff; opacity:0.95; line-height:1.8; margin-bottom:0;">
@@ -863,37 +1507,37 @@
 
         <div class="image-gallery">
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.bba00396-0218-44b5-890c-68d29d2b96de.png" alt="Production musicale">
+                <img src="https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Production musicale">
                 <div class="gallery-overlay">
                     <span>Production Musicale</span>
                 </div>
             </div>
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.999e9c3a-a6f2-4825-8eb8-616f0b0f04f1.png" alt="Design graphique">
+                <img src="https://images.pexels.com/photos/7988086/pexels-photo-7988086.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Design graphique">
                 <div class="gallery-overlay">
                     <span>Design Graphique</span>
                 </div>
             </div>
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.578ffdf5-33c8-4964-aa1f-c37bd7c67e29.png" alt="Photographie digitale">
+                <img src="https://images.pexels.com/photos/8438944/pexels-photo-8438944.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Photographie digitale">
                 <div class="gallery-overlay">
                     <span>Photo Digitale</span>
                 </div>
             </div>
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.7f091ba8-9b3c-4b0c-97ab-7904d4a1a08f.png" alt="Animation 3D">
+                <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Animation 3D">
                 <div class="gallery-overlay">
-                    <span>Cinématographie</span>
+                    <span>Animation 3D</span>
                 </div>
             </div>
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.fbd5dbee-65d6-41b4-9380-645306ff2b49.png" alt="Réalité virtuelle">
+                <img src="https://images.pexels.com/photos/7988671/pexels-photo-7988671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Réalité virtuelle">
                 <div class="gallery-overlay">
                     <span>Réalité Virtuelle</span>
                 </div>
             </div>
             <div class="gallery-item card-appear">
-                <img src="https://copilot.microsoft.com/th/id/BCO.c73c5d98-85b2-4244-b096-3c9c5a406edc.png" alt="Streaming live">
+                <img src="https://images.pexels.com/photos/8728558/pexels-photo-8728558.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Streaming live">
                 <div class="gallery-overlay">
                     <span>Streaming Live</span>
                 </div>
@@ -946,7 +1590,40 @@
     </div>
 </section>
 
+<!-- STATISTIQUES -->
+<section class="content-section">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card card-appear">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Artistes formés</span>
+                </div>
+            </div>
 
+            <div class="col-6 col-md-3">
+                <div class="stat-card card-appear">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Ateliers organisés</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card card-appear">
+                    <span class="stat-number" data-target="1000">0</span>
+                    <span class="stat-label">Œuvres digitalisées</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stat-card card-appear">
+                    <span class="stat-number" data-target="95">0</span>
+                    <span class="stat-label">Taux de satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- FAQ -->
 <section class="content-section" id="faq" style="background: linear-gradient(135deg, #f8faff, #fff);">
@@ -1026,7 +1703,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="text-center card-appear" style="animation-delay:.1s">
                     <div class="icon-circle mb-3" style="margin:0 auto"><i class="fas fa-phone-alt"></i></div>
-                    <h6 style="color:var(--primary);font-size:1.1rem;font-weight:700">Téléphone</h6>
+                    <h6 style="font-family:'Outfit',sans-serif;color:var(--primary);font-size:1.1rem;font-weight:700">Téléphone</h6>
                     <p class="mb-0" style="color:var(--muted);font-size:1.05rem"><a href="tel:+243830681299" style="text-decoration:none;color:var(--muted)">+243 830 681 299</a></p>
                 </div>
             </div>
@@ -1034,7 +1711,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="text-center card-appear" style="animation-delay:.2s">
                     <div class="icon-circle mb-3" style="margin:0 auto"><i class="fas fa-envelope"></i></div>
-                    <h6 style="color:var(--primary);font-size:1.1rem;font-weight:700">Email</h6>
+                    <h6 style="font-family:'Outfit',sans-serif;color:var(--primary);font-size:1.1rem;font-weight:700">Email</h6>
                     <p class="mb-0" style="color:var(--muted);font-size:1.05rem"><a href="mailto:info@fasaec.cd" style="text-decoration:none;color:var(--muted)">info@fasaec.cd</a></p>
                 </div>
             </div>
@@ -1042,7 +1719,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="text-center card-appear" style="animation-delay:.3s">
                     <div class="icon-circle mb-3" style="margin:0 auto"><i class="fas fa-map-marker-alt"></i></div>
-                    <h6 style="color:var(--primary);font-size:1.1rem;font-weight:700">Adresse</h6>
+                    <h6 style="font-family:'Outfit',sans-serif;color:var(--primary);font-size:1.1rem;font-weight:700">Adresse</h6>
                     <p class="mb-0" style="color:var(--muted);font-size:1.05rem">124 avenue Mbomu, Quartier Gbaka, Kinshasa</p>
                 </div>
             </div>
@@ -1050,7 +1727,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="text-center card-appear" style="animation-delay:.4s">
                     <div class="icon-circle mb-3" style="margin:0 auto"><i class="fas fa-globe"></i></div>
-                    <h6 style="color:var(--primary);font-size:1.1rem;font-weight:700">Site Web</h6>
+                    <h6 style="font-family:'Outfit',sans-serif;color:var(--primary);font-size:1.1rem;font-weight:700">Site Web</h6>
                     <p class="mb-0" style="color:var(--muted);font-size:1.05rem"><a href="http://fasaec.cd" target="_blank" style="text-decoration:none;color:var(--muted)">fasaec.cd</a></p>
                 </div>
             </div>
@@ -1060,90 +1737,80 @@
 
 <!-- FOOTER -->
 <div class="footer">
-        <div class="footer-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="footer-widget-logo">
-                            <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo-transparant.png') }}?v={{ time() }}"  alt="img-25"></a>
-                        </div><!-- footer-widget-logo -->
-                        <div class="footer-widget-text">
-                            <p>FASAEC : Pont Numérique de la Culture & du Social</p>
-                        </div><!-- footer-widget-text -->
-                        <div class="footer-widget-socials">
-                            <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                        </div><!-- footer-widget-socials -->
-                    </div><!--col-lg-4-->
-                    <div class="col-lg-3">
-                        <div class="footer-widget">
-                            <div class="footer-widget-explore">
-                                <h4 class="footer-widget-title">Explorer</h4>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="/le-fasaec">LE FASAEC</a>
-                                    </li><!-- has-dropdowfn -->
-                                    <li>
-                                        <a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
-                                    </li><!-- has-dropdown -->
-                                    <li>
-                                        <a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
-                                    </li><!-- has-dropdown -->
-                                    <li>
-                                        <a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
-                                    </li><!--has-dropdown-->
-                                    <li>
-                                        <a href="/actualites">ACTUALITÉS & RESSOURCES</a>
-                                    </li>
-                                    <li>
-                                        <a href="/contact">CONTACT & ORIENTATION</a>
-                                    </li>
-                                </ul><!-- list-unstyled -->
-                            </div><!-- footer-widget-explore -->
-                        </div><!--footer-widget-->
-                    </div><!--col-lg-3-->
-                    <div class="col-lg-2">
-                        <div class="footer-widget">
-                            <div class="footer-widget-department">
-                                <h4 class="footer-widget-title">Organismes</h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="https://culture.gouv.cd/" target="_blank">LE MINISTERE DE LA CULTURE, ARTS & PATRIMOINE</a></li>
-                                    <li><a href="https://enregistrement.capcongo.online/" target="_blank">PLATEFORME D'ENREGISTREMENT D'ARTISTES </a></li>
+    <div class="footer-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-widget-logo">
+                        <a href="/"><img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=180&h=80&fit=crop" alt="FASAEC Logo"></a>
+                    </div>
+                    <div class="footer-widget-text">
+                        <p>FASAEC : Pont Numérique de la Culture & du Social</p>
+                    </div>
+                    <div class="footer-widget-socials">
+                        <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
 
-                                </ul><!-- list-unstyled -->
-                            </div><!-- footer-widget-department -->
-                        </div><!--footer-widget-->
-                    </div><!--col-lg-2-->
-                    <div class="col-lg-3">
-                        <div class="footer-widget">
-                            <div class="footer-widget-contact">
-                                <h4 class="footer-widget-title">Contact</h4>
-                                <p style="text-align:left">124 avenue Mbomu Quartier : Gbaka Commune : Kinshasa Ville Kinshasa République Démocratique du Congo</p>
-                            </div><!-- footer-widget-contact -->
-                            <div class="footer-widget-contact-list">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div class="footer-widget-contact-item">
-                                    <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
-                                </div><!-- footer-widget-contact-item -->
-                            </div><!-- footer-widget-contact-list -->
-                            <div class="footer-widget-contact-list">
-                                <i class="fa-solid fa-phone"></i>
-                                <div class="footer-widget-contact-item">
-                                    <a href="tel:+243830681299">+243830681299</a>
-                                </div><!-- footer-widget-contact-item -->
-                            </div><!-- footer-widget-contact-list -->
-                        </div><!--footer-widget-->
-                    </div><!--col-lg-3-->
-                </div><!-- row -->
-            </div><!-- container -->
-        </div><!--footer-inner-->
-        <div class="bottom-footer">
-            <div class="conatiner">
-                <p>© FASAEC – Tous droits réservés</p>
-            </div><!-- container -->
-        </div><!--bottom-footer-->
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <div class="footer-widget-explore">
+                            <h4 class="footer-widget-title">Explorer</h4>
+                            <ul>
+                                <li><a href="/">ACCUEIL</a></li>
+                                <li><a href="/le-fasaec">LE FASAEC</a></li>
+                                <li><a href="/droits-protection-sociale">DROITS & PROTECTION SOCIALE</a></li>
+                                <li><a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="footer-widget">
+                        <div class="footer-widget-department">
+                            <h4 class="footer-widget-title">Organismes</h4>
+                            <ul>
+                                <li><a href="https://culture.gouv.cd/" target="_blank">MINISTÈRE DE LA CULTURE</a></li>
+                                <li><a href="https://enregistrement.capcongo.online/" target="_blank">PLATEFORME D'ENREGISTREMENT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <div class="footer-widget-contact">
+                            <h4 class="footer-widget-title">Contact</h4>
+                            <p style="text-align:left">124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, Ville Kinshasa, RDC</p>
+                        </div>
+                        <div class="footer-widget-contact-list">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="footer-widget-contact-item">
+                                <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
+                            </div>
+                        </div>
+                        <div class="footer-widget-contact-list">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="footer-widget-contact-item">
+                                <a href="tel:+243830681299">+243830681299</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <div class="container">
+            <p>© FASAEC – Tous droits réservés</p>
+        </div>
+    </div>
 </div>
 
 <!-- MOBILE NAV -->
@@ -1155,10 +1822,18 @@
             <span></span>
         </a>
         <div class="logo-box">
-            <a href="/"><img src="img/logo-transparant.png" width="160" alt="FASAEC"></a>
+            <a href="/"><img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=140&h=60&fit=crop" width="140" alt="FASAEC"></a>
         </div>
-        <div class="mobile-nav-container"></div>
-        <ul class="mobile-nav-contact list-unstyled">
+        <div class="mobile-nav-container">
+            <ul>
+                <li><a href="/">ACCUEIL</a></li>
+                <li><a href="https://enregistrement.capcongo.online/">S'IDENTIFIER</a></li>
+                <li><a href="/le-fasaec">LE FASAEC</a></li>
+                <li><a href="/droits-protection-sociale">DROITS & PROTECTION SOCIALE</a></li>
+                <li class="active"><a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a></li>
+            </ul>
+        </div>
+        <ul class="mobile-nav-contact">
             <li>
                 <i class="fa-solid fa-phone"></i>
                 <a href="tel:+243830681299">+243830681299</a>
@@ -1169,10 +1844,10 @@
             </li>
             <li>
                 <i class="fa-solid fa-map-marker-alt"></i>
-                124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, Ville Kinshasa, République Démocratique du Congo
+                124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, RDC
             </li>
         </ul>
-        <ul class="mobile-nav-social list-unstyled">
+        <ul class="mobile-nav-social">
             <li><a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
             <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
@@ -1183,7 +1858,8 @@
 </div>
 
 <!-- Scripts -->
-
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 // Page Loader
@@ -1197,6 +1873,36 @@ window.addEventListener("load", function() {
 
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const parent = this.parentElement;
+            const wasActive = parent.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            if (!wasActive) {
+                parent.classList.add('active');
+            }
+        });
+    });
+
+    // Mobile nav toggle
+    const mobileNavTogglers = document.querySelectorAll('.mobile-nav-toggler');
+    const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
+    const body = document.body;
+
+    mobileNavTogglers.forEach(toggler => {
+        toggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileNavWrapper.classList.toggle('expanded');
+            body.classList.toggle('locked');
+        });
+    });
+
     // Scroll animations
     const observerOptions = {
         threshold: 0.1,
@@ -1293,264 +1999,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
-
-<!-- Scripts -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/lightbox.js"></script>
-<script src="assets/js/tabs.js"></script>
-<script src="assets/js/video.js"></script>
-<script src="assets/js/slick-slider.js"></script>
-<script src="assets/js/custom.js"></script>
-
-<script>
-$(document).ready(function(){
-    "use strict";
-
-    // FAQ Accordion
-    $('.faq-question').on('click', function() {
-        const parent = $(this).parent();
-        const wasActive = parent.hasClass('active');
-
-        $('.faq-item').removeClass('active');
-
-        if (!wasActive) {
-            parent.addClass('active');
-        }
-    });
-
-    // Scroll animations
-    if ($('.card-appear').length) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        $('.card-appear').each(function() {
-            $(this).css({
-                'opacity': '0',
-                'transform': 'translateY(30px)',
-                'transition': 'all 0.6s ease'
-            });
-            observer.observe(this);
-        });
-    }
-
-    // Mobile nav
-    if($('.mobile-nav-wrapper').length) {
-        $('.mobile-nav-toggler').on('click',function() {
-            $('.mobile-nav-wrapper').toggleClass('expanded');
-            $('body').toggleClass('locked');
-        });
-
-        var menu_content = $('.main-menu .navigation ul')[0].outerHTML;
-        $('.mobile-nav-container').html(menu_content);
-        $('.mobile-nav-container .main-menu-list li.has-dropdown > a').append('<button><i class="fa-solid fa-chevron-right"></i></button>');
-        $('.mobile-nav-container .main-menu-list li.has-dropdown > a button').on('click',function() {
-            $(this).toggleClass('expanded');
-            $(this).parents('a').siblings('ul').slideToggle();
-        });
-    }
-
-    // Sticky header
-    $(window).on("scroll", function () {
-        if ($(".sticky-header").length) {
-            var headerScrollPos = 230;
-            var stricky = $(".sticky-header");
-            if ($(window).scrollTop() > headerScrollPos) {
-                setTimeout(function() {
-                    stricky.addClass("sticky-fixed");
-                },100);
-                stricky.addClass("sticky-header--cloned");
-            } else if ($(this).scrollTop() <= headerScrollPos) {
-                stricky.removeClass("sticky-fixed");
-                stricky.removeClass("sticky-header--cloned");
-            }
-        }
-    });
-
-    // Smooth scroll
-    $('a[href^="#"]').on('click', function(e) {
-        var target = $(this.getAttribute('href'));
-        if(target.length) {
-            e.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 100
-            }, 1000);
-        }
-    });
-});
-
-$(window).on('load', function () {
-    $('body').addClass('loaded');
-});
-</script>
-
-
-
-
-<!-- Scroll To Top Button -->
-<button class="scroll-to-top" id="scrollToTopBtn">
-    <style>
-            /* Scroll To Top Button */
-        .scroll-to-top {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1766d1, #0d47a1);
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            font-size: 18px;
-            cursor: pointer;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-            z-index: 9999;
-        }
-
-        .scroll-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-        }
-
-    </style>
-    <i class="fa-solid fa-arrow-up"></i>
-    <script>
-        const scrollBtn = document.getElementById("scrollToTopBtn");
-
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                scrollBtn.style.display = "flex";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-
-        scrollBtn.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
-</button>
-<!-- Social Floating Buttons -->
-<div class="social-floating" id="socialFloating">
-    <style>
-        /* Floating Social Buttons */
-        .social-floating {
-            position: fixed;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-            z-index: 9999;
-        }
-
-        .social-floating.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-        }
-
-        /* Couleurs officielles */
-        .social-btn.facebook {
-            background: #1877f2;
-        }
-
-        .social-btn.instagram {
-            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-        }
-
-        .social-btn.linkedin {
-            background: #0077b5;
-        }
-        .social-btn.x {
-            background: #000;
-            transition: 0.3s;
-        }
-
-        .social-btn.x:hover {
-            background: #222;
-            transform: translateX(5px);
-        }
-        .social-btn:hover {
-            transform: translateX(5px) scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            .social-btn {/* réduit l’espace interne */
-                font-size: 14px;     /* réduit la taille du texte */
-                border-top-right-radius: 2000px;
-                border-bottom-right-radius: 2000px;
-
-
-            }
-            .social-floating{
-                 left: -10px;
-            }
-        }
-
-
-    </style>
-    <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank" class="social-btn facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank" class="social-btn instagram">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank" class="social-btn linkedin">
-        <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-    <a href="https://x.com/fasaecofficiel" target="_blank" class="social-btn x">
-       <i class="fa-brands fa-x-twitter"></i>
-    </a>
-    <script>
-        const socialFloating = document.getElementById("socialFloating");
-
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                socialFloating.classList.add("active");
-            } else {
-                socialFloating.classList.remove("active");
-            }
-        });
-    </script>
-
-</div>
-
 
 </body>
 </html>

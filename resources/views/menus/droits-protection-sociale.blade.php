@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="canonical" href="https://fasaec.cd/droits-protection-sociale" />
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -17,7 +16,9 @@
             "logo": "https://fasaec.cd/img/logo.png",
             "sameAs": [
                 "https://www.facebook.com/share/17noYupcVM/",
-                "https://www.linkedin.com/company/fonds-d’assistance-sociale-aux-artistes-et-écrivains-congolais-fasaec/"
+                "https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==",
+                "https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/",
+                "https://x.com/fasaecofficiel",
             ]
         }
     </script>
@@ -36,20 +37,24 @@
             ],
             "url": [
                 "https://fasaec.cd/",
-                "https://fasaec.cd/identification-artistes",
-                "https://fasaec.cd/le-fasaec",
-                "https://fasaec.cd/droits-protection-sociale",
-                "https://fasaec.cd/artistes-numerique-ia",
-                "https://fasaec.cd/aides-accompagnement",
-                "https://fasaec.cd/actualites",
-                "https://fasaec.cd/contact"
+                "https://fasaec.cd/le-fasaec/",
+                "https://fasaec.cd/droits-protection-sociale/",
+                "https://fasaec.cd/artistes-numerique-ia/",
+                "https://fasaec.cd/aides-accompagnement/",
+                "https://fasaec.cd/actualites/",
+                "https://fasaec.cd/contact/"
             ]
         }
     </script>
     @endverbatim
 
-    <title>Droits & Protection Sociale | FASAEC</title>
-    <meta name="description" content="Le FASAEC accompagne, protège et soutient les artistes et écrivains congolais en République Démocratique du Congo.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Droits & Protection Sociale des Artistes en RDC | FASAEC</title>
+    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
+    <meta property="og:url" content="https://fasaec.cd" />
+    <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
+    <meta name="description" content="Découvrez vos droits et la protection sociale des artistes et écrivains en République Démocratique du Congo. Le FASAEC garantit assistance santé, aide d'urgence, conseil juridique et accompagnement professionnel.">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,9 +65,7 @@
     <link rel="stylesheet" href="assets/css/owl.css?v=<?= time() ?>">
     <link rel="stylesheet" href="assets/css/lightbox.css?v=<?= time() ?>">
 
-    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
-    <meta property="og:url" content="https://fasaec.cd" />
-    <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
+
 
     <link rel="icon" type="image/png" sizes="32x32" href={{ asset('img/logo.png') }}>
 
@@ -420,13 +423,13 @@
                     <p>Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-4">
+            <div class="col-lg-4 col-sm-4" style="z-index: 1000;">
                 <div class="right-icons">
                     <ul>
                         <li><a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+              <li><a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -477,14 +480,20 @@
                                     <a href="/">ACCUEIL</a>
                                 </li>
                                 <li>
-                                    <a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER</a>
-                                </li>
-                                <li>
                                     <a href="/le-fasaec">LE FASAEC</a>
                                 </li>
                                 <li class="active">
                                     <a href="/droits-protection-sociale" style="white-space: nowrap;">DROITS & PROTECTION SOCIALE</a>
                                 </li>
+                                <li>
+									<a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
+								</li>
+                                <li>
+									<a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
+								</li>
+                                <li>
+									<a href="/actualites">ACTUALITÉS & RESSOURCES</a>
+								</li>
                                 <li></li><br>
                             </ul>
                         </nav>
@@ -1145,79 +1154,90 @@
 
 <!-- FOOTER -->
 <div class="footer">
-    <div class="footer-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer-widget-logo">
-                        <a href="/"><img src="img/logo-transparant.png" alt="FASAEC Logo"></a>
-                    </div>
-                    <div class="footer-widget-text">
-                        <p>FASAEC : Pont Numérique de la Culture & du Social</p>
-                    </div>
-                    <div class="footer-widget-socials">
-                        <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-widget-logo">
+                            <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo-transparant.png') }}?v={{ time() }}"  alt="img-25"></a>
+                        </div><!-- footer-widget-logo -->
+                        <div class="footer-widget-text">
+                            <p>FASAEC : Pont Numérique de la Culture & du Social</p>
+                        </div><!-- footer-widget-text -->
+                        <div class="footer-widget-socials">
+                            <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div><!-- footer-widget-socials -->
+                    </div><!--col-lg-4-->
+                    <div class="col-lg-3">
+                        <div class="footer-widget">
+                            <div class="footer-widget-explore">
+                                <h4 class="footer-widget-title">Explorer</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="/le-fasaec">LE FASAEC</a>
+                                    </li><!-- has-dropdowfn -->
+                                    <li>
+                                        <a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
+                                    </li><!-- has-dropdown -->
+                                    <li>
+                                        <a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
+                                    </li><!-- has-dropdown -->
+                                    <li>
+                                        <a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
+                                    </li><!--has-dropdown-->
+                                    <li>
+                                        <a href="/actualites">ACTUALITÉS & RESSOURCES</a>
+                                    </li>
+                                    <li>
+                                        <a href="/contact">CONTACT & ORIENTATION</a>
+                                    </li>
+                                </ul><!-- list-unstyled -->
+                            </div><!-- footer-widget-explore -->
+                        </div><!--footer-widget-->
+                    </div><!--col-lg-3-->
+                    <div class="col-lg-2">
+                        <div class="footer-widget">
+                            <div class="footer-widget-department">
+                                <h4 class="footer-widget-title">Organismes</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="https://culture.gouv.cd/" target="_blank">LE MINISTERE DE LA CULTURE, ARTS & PATRIMOINE</a></li>
+                                    <li><a href="https://enregistrement.capcongo.online/" target="_blank">PLATEFORME D'ENREGISTREMENT D'ARTISTES </a></li>
 
-                <div class="col-lg-3">
-                    <div class="footer-widget">
-                        <div class="footer-widget-explore">
-                            <h4 class="footer-widget-title">Explorer</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="/">ACCUEIL</a></li>
-                                <li><a href="/le-fasaec">LE FASAEC</a></li>
-                                <li><a href="/droits-protection-sociale">DROITS & PROTECTION SOCIALE</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                        <div class="footer-widget-department">
-                            <h4 class="footer-widget-title">Organismes</h4>
-                            <ul class="list-unstyled">
-                                <li><a href="https://culture.gouv.cd/" target="_blank">LE MINISTERE DE LA CULTURE</a></li>
-                                <li><a href="https://enregistrement.capcongo.online/" target="_blank">PLATEFORME D'ENREGISTREMENT</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="footer-widget">
-                        <div class="footer-widget-contact">
-                            <h4 class="footer-widget-title">Contact</h4>
-                            <p style="text-align:left">124 avenue Mbomu, Quartier Gbaka, Commune Kinshasa, Ville Kinshasa, République Démocratique du Congo</p>
-                        </div>
-                        <div class="footer-widget-contact-list">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div class="footer-widget-contact-item">
-                                <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
-                            </div>
-                        </div>
-                        <div class="footer-widget-contact-list">
-                            <i class="fa-solid fa-phone"></i>
-                            <div class="footer-widget-contact-item">
-                                <a href="tel:+243830681299">+243830681299</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-footer">
-        <div class="conatiner">
-            <p>© FASAEC – Tous droits réservés</p>
-        </div>
-    </div>
+                                </ul><!-- list-unstyled -->
+                            </div><!-- footer-widget-department -->
+                        </div><!--footer-widget-->
+                    </div><!--col-lg-2-->
+                    <div class="col-lg-3">
+                        <div class="footer-widget">
+                            <div class="footer-widget-contact">
+                                <h4 class="footer-widget-title">Contact</h4>
+                                <p style="text-align:left">124 avenue Mbomu Quartier : Gbaka Commune : Kinshasa Ville Kinshasa République Démocratique du Congo</p>
+                            </div><!-- footer-widget-contact -->
+                            <div class="footer-widget-contact-list">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div class="footer-widget-contact-item">
+                                    <a href="mailto:info@fasaec.cd">info@fasaec.cd</a>
+                                </div><!-- footer-widget-contact-item -->
+                            </div><!-- footer-widget-contact-list -->
+                            <div class="footer-widget-contact-list">
+                                <i class="fa-solid fa-phone"></i>
+                                <div class="footer-widget-contact-item">
+                                    <a href="tel:+243830681299">+243830681299</a>
+                                </div><!-- footer-widget-contact-item -->
+                            </div><!-- footer-widget-contact-list -->
+                        </div><!--footer-widget-->
+                    </div><!--col-lg-3-->
+                </div><!-- row -->
+            </div><!-- container -->
+        </div><!--footer-inner-->
+        <div class="bottom-footer">
+            <div class="conatiner">
+                <p>© FASAEC – Tous droits réservés</p>
+            </div><!-- container -->
+        </div><!--bottom-footer-->
 </div>
 
 <!-- MOBILE NAV -->
@@ -1354,5 +1374,160 @@ $(window).on('load', function () {
 });
 </script>
 
+
+<!-- Scroll To Top Button -->
+<button class="scroll-to-top" id="scrollToTopBtn">
+    <style>
+            /* Scroll To Top Button */
+        .scroll-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1766d1, #0d47a1);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+    </style>
+    <i class="fa-solid fa-arrow-up"></i>
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</button>
+<!-- Social Floating Buttons -->
+<div class="social-floating" id="socialFloating">
+    <style>
+        /* Floating Social Buttons */
+        .social-floating {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 9999;
+        }
+
+        .social-floating.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Couleurs officielles */
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+        }
+
+        .social-btn.linkedin {
+            background: #0077b5;
+        }
+        .social-btn.x {
+            background: #000;
+            transition: 0.3s;
+        }
+
+        .social-btn.x:hover {
+            background: #222;
+            transform: translateX(5px);
+        }
+        .social-btn:hover {
+            transform: translateX(5px) scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .social-btn {/* réduit l’espace interne */
+                font-size: 14px;     /* réduit la taille du texte */
+                border-top-right-radius: 2000px;
+                border-bottom-right-radius: 2000px;
+
+
+            }
+            .social-floating{
+                 left: -10px;
+            }
+        }
+
+
+    </style>
+    <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank" class="social-btn facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank" class="social-btn instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank" class="social-btn linkedin">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="https://x.com/fasaecofficiel" target="_blank" class="social-btn x">
+       <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <script>
+        const socialFloating = document.getElementById("socialFloating");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                socialFloating.classList.add("active");
+            } else {
+                socialFloating.classList.remove("active");
+            }
+        });
+    </script>
+
+</div>
 </body>
 </html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="canonical" href="https://fasaec.cd/le-fasaec" />
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -17,7 +16,9 @@
             "logo": "https://fasaec.cd/img/logo.png",
             "sameAs": [
                 "https://www.facebook.com/share/17noYupcVM/",
-                "https://www.linkedin.com/company/fonds-d’assistance-sociale-aux-artistes-et-écrivains-congolais-fasaec/"
+                "https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==",
+                "https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/",
+                "https://x.com/fasaecofficiel",
             ]
         }
     </script>
@@ -36,20 +37,23 @@
             ],
             "url": [
                 "https://fasaec.cd/",
-                "https://fasaec.cd/identification-artistes",
-                "https://fasaec.cd/le-fasaec",
-                "https://fasaec.cd/droits-protection-sociale",
-                "https://fasaec.cd/artistes-numerique-ia",
-                "https://fasaec.cd/aides-accompagnement",
-                "https://fasaec.cd/actualites",
-                "https://fasaec.cd/contact"
+                "https://fasaec.cd/le-fasaec/",
+                "https://fasaec.cd/droits-protection-sociale/",
+                "https://fasaec.cd/artistes-numerique-ia/",
+                "https://fasaec.cd/aides-accompagnement/",
+                "https://fasaec.cd/actualites/",
+                "https://fasaec.cd/contact/"
             ]
         }
     </script>
     @endverbatim
-
-    <title>FASAEC – Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais</title>
-    <meta name="description" content="Le FASAEC accompagne, protège et soutient les artistes et écrivains congolais en République Démocratique du Congo.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LE FASAEC</title>
+    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
+    <meta property="og:url" content="https://fasaec.cd" />
+    <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
+    <meta name="description" content="Découvrez le FASAEC, service public sous tutelle du Ministère de la Culture en RDC. Protection sociale, accompagnement professionnel et transition numérique des artistes et écrivains congolais.">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,10 +63,6 @@
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css?v=<?= time() ?>">
     <link rel="stylesheet" href="assets/css/owl.css?v=<?= time() ?>">
     <link rel="stylesheet" href="assets/css/lightbox.css?v=<?= time() ?>">
-
-    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
-    <meta property="og:url" content="https://fasaec.cd" />
-    <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
 
     <link rel="icon" type="image/png" sizes="32x32" href={{ asset('img/logo.png') }}>
 
@@ -103,7 +103,9 @@
 </script>
 
   <!-- Sub Header -->
+
   <div class="sub-header">
+
     <div class="container">
     <div class="row">
         <div class="col-lg-8 col-sm-8">
@@ -111,24 +113,25 @@
             <p>Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)</p>
         </div>
         </div>
-        <div class="col-lg-4 col-sm-4">
+        <div class="col-lg-4 col-sm-4" style="z-index: 1000;">
         <div class="right-icons">
             <ul>
-            <li><a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-tiktok" target="_blank"></i></a></li>
+              <li><a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
             </ul>
         </div>
         </div>
     </div>
     </div>
+
   </div>
 
   <header class="header header-area header-sticky">
 	<div class="topbar-one">
-		<div class="topbar-one-left">
-			<div class="menu-logo">
+		<div class="topbar-one-left" >
+			<div class="menu-logo" >
                 <a href="{{ route('accueil') }}">
                     <img id="logo-transparent" src="{{ asset('img/logo-transparant.png') }}?v={{ time() }}" width="160" alt="logo transparent">
                     <img id="logo-couleur" src="{{ asset('img/logo-couleur.png') }}?v={{ time() }}" width="160" alt="logo couleur">
@@ -136,7 +139,7 @@
             </div>
 
 		</div><!-- topbar-one-left -->
-		<div class="container">
+		<div class="container" >
 			<div class="topbar-one-middle">
 				<div class="topbar-info">
 					<ul>
@@ -170,16 +173,13 @@
 								<li class="active">
 									<a href="/">ACCUEIL</a>
 								</li><!-- has-dropdown -->
-                                <li>
-									<a href="https://enregistrement.capcongo.online/" style="white-space: nowrap;">S'IDENTIFIER</a>
-								</li><!-- has-dropdowfn -->
 								<li>
 									<a href="/le-fasaec">LE FASAEC</a>
 								</li><!-- has-dropdowfn -->
 								<li>
 									<a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
 								</li><!-- has-dropdown -->
-								{{-- <li>
+								 <li>
 									<a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
 								</li><!-- has-dropdown -->
 								<li>
@@ -188,7 +188,7 @@
 								<li>
 									<a href="/actualites">ACTUALITÉS & RESSOURCES</a>
 								</li>
-                                <li>
+                                {{--<li>
 									<a href="/contact">CONTACT & ORIENTATION</a>
 								</li> --}}
                                 <li></li><br><!-- li -->
@@ -448,7 +448,7 @@
 
                 <div class="col-6 col-md-3">
                     <div class="stat-card">
-                        <span class="stat-number" data-target="9">0</span>
+                        <span class="stat-number" data-target="5">0</span>
                         <span class="stat-label">Directions provinciales</span>
                     </div>
                 </div>
@@ -555,10 +555,9 @@
                         </div><!-- footer-widget-text -->
                         <div class="footer-widget-socials">
                             <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                             <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/fasaecofficiel" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                         </div><!-- footer-widget-socials -->
                     </div><!--col-lg-4-->
                     <div class="col-lg-3">
@@ -567,23 +566,23 @@
                                 <h4 class="footer-widget-title">Explorer</h4>
                                 <ul class="list-unstyled">
                                     <li>
-									<a href="#">LE FASAEC</a>
-								</li><!-- has-dropdowfn -->
-								<li>
-									<a href="#" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
-								</li><!-- has-dropdown -->
-								<li>
-									<a href="#">ARTISTES & NUMÉRIQUE / IA</a>
-								</li><!-- has-dropdown -->
-								<li>
-									<a href="#">AIDES & ACCOMPAGNEMENT</a>
-								</li><!--has-dropdown-->
-								<li>
-									<a href="#">ACTUALITÉS & RESSOURCES</a>
-								</li>
-                                <li>
-									<a href="#">CONTACT & ORIENTATION</a>
-								</li>
+                                        <a href="/le-fasaec">LE FASAEC</a>
+                                    </li><!-- has-dropdowfn -->
+                                    <li>
+                                        <a href="/droits-protection-sociale" style="white-space: nowrap; ">DROITS & PROTECTION SOCIALE</a>
+                                    </li><!-- has-dropdown -->
+                                    <li>
+                                        <a href="/artistes-numerique-ia">ARTISTES & NUMÉRIQUE / IA</a>
+                                    </li><!-- has-dropdown -->
+                                    <li>
+                                        <a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
+                                    </li><!--has-dropdown-->
+                                    <li>
+                                        <a href="/actualites">ACTUALITÉS & RESSOURCES</a>
+                                    </li>
+                                    <li>
+                                        <a href="/contact">CONTACT & ORIENTATION</a>
+                                    </li>
                                 </ul><!-- list-unstyled -->
                             </div><!-- footer-widget-explore -->
                         </div><!--footer-widget-->
@@ -1111,6 +1110,161 @@
         });
     </script>
 
+
+<!-- Scroll To Top Button -->
+<button class="scroll-to-top" id="scrollToTopBtn">
+    <style>
+            /* Scroll To Top Button */
+        .scroll-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1766d1, #0d47a1);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+    </style>
+    <i class="fa-solid fa-arrow-up"></i>
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</button>
+<!-- Social Floating Buttons -->
+<div class="social-floating" id="socialFloating">
+    <style>
+        /* Floating Social Buttons */
+        .social-floating {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 9999;
+        }
+
+        .social-floating.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Couleurs officielles */
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+        }
+
+        .social-btn.linkedin {
+            background: #0077b5;
+        }
+        .social-btn.x {
+            background: #000;
+            transition: 0.3s;
+        }
+
+        .social-btn.x:hover {
+            background: #222;
+            transform: translateX(5px);
+        }
+        .social-btn:hover {
+            transform: translateX(5px) scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .social-btn {/* réduit l’espace interne */
+                font-size: 14px;     /* réduit la taille du texte */
+                border-top-right-radius: 2000px;
+                border-bottom-right-radius: 2000px;
+
+
+            }
+            .social-floating{
+                 left: -10px;
+            }
+        }
+
+
+    </style>
+    <a href="https://www.facebook.com/share/17noYupcVM/" target="_blank" class="social-btn facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/fasaec_officiel?igsh=MWo0d21ubnhsb254bA==" target="_blank" class="social-btn instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/company/fonds-d%E2%80%99assistance-sociale-aux-artistes-et-%C3%A9crivains-congolais-fasaec/" target="_blank" class="social-btn linkedin">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <a href="https://x.com/fasaecofficiel" target="_blank" class="social-btn x">
+       <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <script>
+        const socialFloating = document.getElementById("socialFloating");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                socialFloating.classList.add("active");
+            } else {
+                socialFloating.classList.remove("active");
+            }
+        });
+    </script>
+
+</div>
 
 </body>
 </html>
