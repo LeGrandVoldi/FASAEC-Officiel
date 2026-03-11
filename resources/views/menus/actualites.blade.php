@@ -34,13 +34,13 @@
                 "Contact & Orientation"
             ],
             "url": [
-                "https://fasaec.cd/",
-                "https://fasaec.cd/le-fasaec/",
-                "https://fasaec.cd/droits-protection-sociale/",
-                "https://fasaec.cd/artistes-numerique-ia/",
-                "https://fasaec.cd/aides-accompagnement/",
-                "https://fasaec.cd/actualites/",
-                "https://fasaec.cd/contact/"
+                "https://fasaec.cd",
+                "https://fasaec.cd/le-fasaec",
+                "https://fasaec.cd/droits-protection-sociale",
+                "https://fasaec.cd/artistes-numerique-ia",
+                "https://fasaec.cd/aides-accompagnement",
+                "https://fasaec.cd/actualites",
+                "https://fasaec.cd/contact"
             ]
         }
     </script>

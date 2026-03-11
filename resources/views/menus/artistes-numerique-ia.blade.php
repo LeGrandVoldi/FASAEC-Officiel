@@ -5,12 +5,13 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     {{-- JS --}}
-    @verbatim
+     @verbatim
     <script type="application/ld+json?v={{ time() }}">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FASAEC",
+            "alternateName": "Fonds d'Assistance Sociale aux Artistes et Écrivains Congolais",
             "url": "https://fasaec.cd",
             "logo": "https://fasaec.cd/img/logo.png",
             "sameAs": [
@@ -24,9 +25,9 @@
     <script type="application/ld+json?v={{ time() }}">
         {
             "@context": "https://schema.org",
-            "@type": "SiteNavigationElement",
+            "@type": "WebSite",
             "name": [
-                "Accueil",
+                "FASAEC",
                 "Le FASAEC",
                 "Droits & Protection sociale",
                 "Artistes & Numérique / IA",
@@ -35,13 +36,13 @@
                 "Contact & Orientation"
             ],
             "url": [
-                "https://fasaec.cd/",
-                "https://fasaec.cd/le-fasaec/",
-                "https://fasaec.cd/droits-protection-sociale/",
-                "https://fasaec.cd/artistes-numerique-ia/",
-                "https://fasaec.cd/aides-accompagnement/",
-                "https://fasaec.cd/actualites/",
-                "https://fasaec.cd/contact/"
+                "https://fasaec.cd",
+                "https://fasaec.cd/le-fasaec",
+                "https://fasaec.cd/droits-protection-sociale",
+                "https://fasaec.cd/artistes-numerique-ia",
+                "https://fasaec.cd/aides-accompagnement",
+                "https://fasaec.cd/actualites",
+                "https://fasaec.cd/contact"
             ]
         }
     </script>
@@ -49,12 +50,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Artistes, Numérique & Intelligence Artificielle en RDC | FASAEC</title>
-    <meta property="og:title" content="Fonds d'Assistance Sociale aux Artistes et Ecrivains Congolais (FASAEC)" />
+    <title>Artistes, Numérique & Intelligence Artificielle en RDC</title>
+    <meta property="og:title" content="Artistes, Numérique & Intelligence Artificielle en RDC" />
     <meta property="og:url" content="https://fasaec.cd" />
     <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
-
     <meta name="description" content="Le FASAEC accompagne les artistes congolais dans la transformation numérique et l'intelligence artificielle en RDC : formations digitales, outils IA, monétisation en ligne et protection des œuvres.">
+    <meta property="og:site_name" content="Artistes, Numérique & Intelligence Artificielle en RDC">
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -570,7 +571,7 @@
                                 <li>
 									<a href="/aides-accompagnement">AIDES & ACCOMPAGNEMENT</a>
 								</li>
-                                
+
                                 <li></li><br>
                             </ul>
                         </nav>

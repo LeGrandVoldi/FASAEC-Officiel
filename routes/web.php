@@ -17,4 +17,8 @@ Route::get("/droits-protection-sociale", [MenusController::class, 'index_2' ])->
 Route::get("/artistes-numerique-ia", [MenusController::class, 'index_3' ])->name('');
 Route::get("/aides-accompagnement", [MenusController::class, 'index_4' ])->name('');
 Route::get("/actualites", [MenusController::class, 'index_5' ])->name('');
-Route::get("/contact", [MenusController::class, 'index_6' ])->name('');
+Route::get("/gestion-actualites", [MenusController::class, 'index_6' ])->name('');
+Route::post("/verifier_email", [MenusController::class, 'index_7' ])->name('verifier.email');
+Route::get('/dashboard/{email}', [MenusController::class, 'index_8'])
+    ->name('dashboard');
+Route::get("/contact", [MenusController::class, 'index_9' ])->name('');

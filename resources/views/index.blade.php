@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://fasaec.cd/" />
+    <link rel="canonical" href="https://fasaec.cd" />
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -12,6 +12,7 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "FASAEC",
+            "alternateName": "Fonds d'Assistance Sociale aux Artistes et Écrivains Congolais",
             "url": "https://fasaec.cd",
             "logo": "https://fasaec.cd/img/logo.png",
             "sameAs": [
@@ -25,9 +26,9 @@
     <script type="application/ld+json?v={{ time() }}">
         {
             "@context": "https://schema.org",
-            "@type": "SiteNavigationElement",
+            "@type": "WebSite",
             "name": [
-                "Accueil",
+                "FASAEC",
                 "Le FASAEC",
                 "Droits & Protection sociale",
                 "Artistes & Numérique / IA",
@@ -36,13 +37,13 @@
                 "Contact & Orientation"
             ],
             "url": [
-                "https://fasaec.cd/",
-                "https://fasaec.cd/le-fasaec/",
-                "https://fasaec.cd/droits-protection-sociale/",
-                "https://fasaec.cd/artistes-numerique-ia/",
-                "https://fasaec.cd/aides-accompagnement/",
-                "https://fasaec.cd/actualites/",
-                "https://fasaec.cd/contact/"
+                "https://fasaec.cd",
+                "https://fasaec.cd/le-fasaec",
+                "https://fasaec.cd/droits-protection-sociale",
+                "https://fasaec.cd/artistes-numerique-ia",
+                "https://fasaec.cd/aides-accompagnement",
+                "https://fasaec.cd/actualites",
+                "https://fasaec.cd/contact"
             ]
         }
     </script>
@@ -50,12 +51,13 @@
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais</title>
-    <meta property="og:title" content="FASAEC RDC" />
+    <title>FASAEC</title>
+    <meta property="og:title" content="Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais" />
     <meta property="og:url" content="https://fasaec.cd" />
     <meta property="og:image" content="{{ asset('img/logo-couleur.png') }}" />
     <meta name="description" content="Le FASAEC accompagne, protège et soutient les artistes et écrivains congolais en République Démocratique du Congo.">
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fonds d’Assistance Sociale aux Artistes et Écrivains Congolais">
     <!-- Bootstrap core CSS -->
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
